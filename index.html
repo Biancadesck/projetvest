@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem para os Vestibulares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Falta quanto pro vestibular? </h1>
+        <p class="subtitle">Escolha a prova e confira o tempo que falta e os detalhes de cada edital.</p>
+            
+        <div class="selector-wrapper">
+            <label for="vestibular-select">Selecione o vestibular:</label>
+            <div class="select-custom">
+                <select id="vestibular-select">
+                    <option value="enem">ENEM (1º Dia)</option>
+                    <option value="fuvest">FUVEST (1ª Fase)</option>
+                    <option value="ufpr">UFPR</option>
+                    <option value="uel">UEL</option>
+                    <option value="uem">UEM (Verão)</option>
+                    <option value="uepg">UEPG</option>
+                    <option value="unicentro">UNICENTRO</option>
+                    <option value="unioeste">UNIOESTE</option>
+                    <option value="utfpr">UTFPR</option>
+                    <option value="puc">PUC-PR</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="timer-display">
+            <h2 id="vestibular-title">ENEM</h2>
+            <p class="exam-date">Data da prova: <span id="exam-date-text">--/--/----</span></p>
+            
+            <div class="exam-info">
+                <div class="info-item"><strong>Questões:</strong> <span id="info-questoes">--</span></div>
+                <div class="info-item"><strong>Redação:</strong> <span id="info-redacao">--</span></div>
+                <div class="info-item"><strong>Matérias:</strong> <span id="info-materias">--</span></div>
+            </div>
+
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Dias</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Horas</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+            <p id="finished-message" class="finished-hidden">⚠️ Essa prova já aconteceu ou começou!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
